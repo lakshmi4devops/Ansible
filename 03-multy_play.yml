@@ -1,7 +1,22 @@
-- name: Multiplay display
+# - name: Multiplay display
+#   hosts: localhost
+#   become: no
+#   tasks:
+#     - name: task level display
+#       ansible.builtin.debug:
+#         msg: "Play at task level"
+- name: PLAY-1 display
   hosts: localhost
   become: no
   tasks:
-    - name: task level display
+    - name: task-1
       ansible.builtin.debug:
-        msg: "Play at task level"
+        msg: "Play-1 at task-1"
+
+- name: PLAY-2 display
+  hosts: localhost
+  become: no
+  tasks:
+    - name: task-1
+      ansible.builtin.debug:
+        msg: "Play-2 at task-1"
