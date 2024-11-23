@@ -2,8 +2,8 @@
   hosts: localhost
   become: no
   vars:
-    COURSE:dev-ops
-    DURATION:3  months
+    COURSE: dev-ops
+    DURATION: 3  months
   tasks:
     - name: display variables at play level
       ansible.builtin.debug:
