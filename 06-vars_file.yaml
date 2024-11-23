@@ -1,7 +1,7 @@
 - name: variables display from file
   hosts: localhost
   become: no
-  vars_file:
+  vars_files:
     - vars.yaml 
   tasks:
   - name: display variables from file
