@@ -3,6 +3,4 @@
   become: no
   tasks:
   - name: check user exist or not
-    ansible.builtin.debug:
-      msg: "Hi, I am learning conditions."
     ansible.builtin.command: id nginx
