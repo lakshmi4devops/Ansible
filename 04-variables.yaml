@@ -1,0 +1,10 @@
+- name: variables display
+  hosts: localhost
+  become: no
+  vars:
+    COURSE:dev-ops
+    DURATION:3  months
+  tasks:
+    - name: display variables at play level
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{COURSE}} and duration is {{DURATION}}"
