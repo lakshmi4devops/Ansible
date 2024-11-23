@@ -1,0 +1,7 @@
+- name: variables from args
+  hosts: localhost
+  become: no
+  tasks:
+  - name: display variables from args
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}} and duration is {{DURATION}}"
