@@ -9,6 +9,9 @@
   - name: print user_data
     ansible.builtin.debug:
       msg: "user data: {{user_data}}"
+  - name: create user
+    ansible.builtin.command: useradd nginx
+    when: user_data.rc != 0 #condition  
   - name: print file message
     ansible.builtin.debug:
       msg: "final message"
