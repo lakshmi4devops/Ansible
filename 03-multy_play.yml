@@ -1,0 +1,7 @@
+- name: Multiplay display
+  hosts: localhost
+  become: no
+  tasks:
+    - name: task level display
+      ansible.builtin.debug:
+        msg: "Play at task level"
