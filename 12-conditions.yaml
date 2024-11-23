@@ -1,6 +1,6 @@
 - name: conditions
   hosts: localhost
-  become: no
+  become: yes
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id nginx
