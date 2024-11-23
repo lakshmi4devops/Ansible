@@ -1,0 +1,14 @@
+- name: variables from prompt
+  hosts: localhost
+  become: no
+  vars_prompt:
+    - name: COURSE
+      prompt: please pass COURSE
+      private: no
+    - name: DURATION
+      prompt: pass pass duration
+      private: yes  
+  tasks:
+  - name: display variables from file
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}} and duration is {{DURATION}}"
