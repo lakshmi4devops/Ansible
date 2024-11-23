@@ -4,8 +4,8 @@
   tasks:
   - name: check user exist or not
     ansible.builtin.command: id nginx
-    #register: user_data
-    #ignore_errors: true
+    register: user_data
+    ignore_errors: true
   - name: print user_data
     ansible.builtin.debug:
       msg: "user data: {{user_data}}"
