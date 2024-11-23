@@ -6,7 +6,8 @@
     DURATION: 3  months
   tasks:
   - name: display variables at task level
-    COURSE: ansible # overriding
+    vars:
+      COURSE: ansible # overriding
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}} and duration is {{DURATION}}"
 
