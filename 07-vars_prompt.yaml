@@ -9,6 +9,6 @@
       prompt: pass pass duration
       private: yes  
   tasks:
-  - name: display variables from file
+  - name: display variables from prompt
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}} and duration is {{DURATION}}"
