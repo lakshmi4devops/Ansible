@@ -1,0 +1,18 @@
+- name: data types
+  hosts: localhost
+  become: no
+  vars:
+    COURSE: dev-ops #string
+    Tools:  # List
+    - Linux
+    - shell
+    - python
+    Experience: #Map / dict
+      DevOps: 3Y
+      AWS: 2Y
+      Docker: 3Y
+    Any_Gaps: no # boolean
+  tasks:
+  - name: display data types
+    ansible.builtin.debug:
+      msg: "course: {{COURSE}}, tools used: {{Tools}}, Experience: {{Experience}}, any career gap: {{Any_Gaps}}"
